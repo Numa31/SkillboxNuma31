@@ -17,5 +17,3 @@ while user != '=':
        min = number_1 + 1
 
 
-       # а я все летала
-
