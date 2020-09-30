@@ -3,17 +3,22 @@ min = 1
 max = 100
 user = None
 print('Загадайте число')
+i = 1
 while user != '=':
-    number_1 = random.randint(min,max)
-    print('Это число - ', number_1)
+    number = random.randint(min,max) #рандомное число из диапазона
+    print('Это число - ', number)
     user = input('Напишите мне угадал ли число, либо дайте подсказку знаками =, +, -. ')
     if user == '=':
-       print('Ура я угадал! Вы загадали число:', number_1)
+       print('Ура я угадал! Вы загадали число:', number, 'Количество попыток ',i)
     elif user == '-':
-       max = number_1 -1
+       max = number -1
        print('Попробую поменьше!')
+       i = i + 1
     elif user == '+':
        print('Попробую больше!')
-       min = number_1 + 1
+       min = number + 1
+       i = i + 1
+    else:
+       print('Потрачено...')
 
 
