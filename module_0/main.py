@@ -2,13 +2,13 @@ left = -1
 right = 101
 while True:
     number = (left+right)//2 #Определяем середину диапазона
-    is_right = input('Ваше число: {}? (да,+,-)'.format(number))
-    if is_right.lower() == 'да':
-        print ('Я его угадал!')
+    isright = input('Ваше число: {}? (да,+,-)'.format(number))
+    if isright.lower() == 'да':
+        print ('Есть!')
         break
-    elif is_right=='+':
+    elif isright=='+':
         left = number + 1
-    elif is_right=='-':
+    elif isright=='-':
         right = number - 1
     else:
-        print ('Дичь')
+        print ('Потрачено')
